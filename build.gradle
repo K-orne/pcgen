@@ -154,6 +154,8 @@ task copyMasterSheets(type: Copy) {
 
 compileJava {
     it.dependsOn 'copyMasterSheets'
+    it.options.compilerArgs.add('--enable-preview')
+}
 }
 
 /*
@@ -167,7 +169,7 @@ dependencies {
     implementation group: 'commons-io', name: 'commons-io', version:'2.11.0'
 
     implementation group: 'org.springframework', name: 'spring-web', version:'5.3.9'
-    implementation group: 'org.springframework', name: 'spring-beans', version:'5.3.9'
+    implementation group: 'org.springframework', name: 'spring-beans', version:'5.3.10'
     implementation group: 'org.springframework', name: 'spring-core', version:'5.3.10'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version:'3.12.0'
     implementation('org.apache.xmlgraphics:fop:2.6')
